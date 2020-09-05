@@ -6,9 +6,21 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    name: 'Index',
-    component: () =>
-      import(/* webpackChunkName: "index" */ '@/views/IndexView'),
+    component: () => import('@/layout/MainLayout'),
+    children: [
+      {
+        path: '',
+        name: '메인',
+        component: () =>
+          import(/* webpackChunkName: "index" */ '@/views/IndexView'),
+      },
+      {
+        path: 'login',
+        name: '메인',
+        component: () =>
+          import(/* webpackChunkName: "login" */ '@/views/LoginView'),
+      },
+    ],
   },
 ];
 
