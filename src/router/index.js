@@ -6,9 +6,39 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    name: 'Index',
-    component: () =>
-      import(/* webpackChunkName: "index" */ '@/views/IndexView'),
+    component: () => import('@/layout/MainLayout'),
+    children: [
+      {
+        path: '',
+        name: '메인',
+        meta: {
+          title: 'AMADO',
+        },
+        component: () =>
+          import(/* webpackChunkName: "index" */ '@/views/IndexView'),
+      },
+      {
+        path: 'login',
+        name: '로그인',
+        meta: {
+          title: 'AMADO 로그인',
+        },
+        component: () =>
+          import(/* webpackChunkName: "login" */ '@/views/LoginView'),
+      },
+    ],
+  },
+  {
+    path: '*',
+    component: () => import('@/layout/MainLayout'),
+    children: [
+      {
+        path: '',
+        name: '예외',
+        component: () =>
+          import(/* webpackChunkName: "page" */ '@/views/NotFoundView'),
+      },
+    ],
   },
 ];
 
