@@ -1,0 +1,24 @@
+@mixin border-solid($width : 1px, $color : #000) {
+  border: $width solid $color
+}
+
+@mixin border-bottom-solid($width : 1px, $color : #000) {
+  border-bottom: $width solid $color
+}
+
+@mixin border-side-solid($width : 1px, $color : #000) {
+  border-left: $width solid $color;
+  border-right: $width solid $color;
+}
+
+// 미디어쿼리
+@mixin mobile-media {
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
+@mixin tablet-media {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}

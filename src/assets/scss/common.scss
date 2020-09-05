@@ -1,3 +1,9 @@
+@font-face {font-family: 'NotoSansKR';font-style: normal;font-weight: 100;src: url(../font/NotoSansKR-Black.otf) format('opentype')};
+@font-face {font-family: 'NotoSansKR';font-style: normal;font-weight: 300;src: url(../font/NotoSansKR-Light.otf) format('opentype')};
+@font-face {font-family: 'NotoSansKR';font-style: normal;font-weight: 400;src: url(../font/NotoSansKR-Regular.otf) format('opentype')};
+@font-face {font-family: 'NotoSansKR';font-style: normal;font-weight: 500;src: url(../font/NotoSansKR-Medium.otf) format('opentype')};
+@font-face {font-family: 'NotoSansKR';font-style: normal;font-weight: 700;src: url(../font/NotoSansKR-Bold.otf) format('opentype')};
+
 
 * {
   margin: 0;
@@ -9,6 +15,9 @@
 
 html {
   font-size: 62.5%;
+}
+body {  
+  font-family: -apple-system, 'Apple SD Gothic Neo', 'NotoSansKR', sans-serif;  
 }
 
 a:link { color: #000; text-decoration: none;}

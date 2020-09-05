@@ -22,6 +22,18 @@ const routes = [
       },
     ],
   },
+  {
+    path: '*',
+    component: () => import('@/layout/MainLayout'),
+    children: [
+      {
+        path: '',
+        name: '예외',
+        component: () =>
+          import(/* webpackChunkName: "page" */ '@/views/NotFoundView'),
+      },
+    ],
+  },
 ];
 
 const router = new VueRouter({
