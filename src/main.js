@@ -9,6 +9,8 @@ import '@/assets/scss/common.scss';
 
 Vue.config.productionTip = false;
 
+Vue.prototype.$EventBus = new Vue();
+
 Vue.use(Antd);
 
 new Vue({

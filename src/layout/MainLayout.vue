@@ -18,9 +18,10 @@ export default {
 <style lang="scss" scoped>
 .layout-wrap {
   width: 100vw;
-  min-height: 100vh;
+  // min-height: 100vh;
+  height: 100%;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: $white;
   @include border-side-solid(1px, $border-color);
 
   .container {

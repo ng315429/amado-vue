@@ -11,12 +11,18 @@ const routes = [
       {
         path: '',
         name: '메인',
+        meta: {
+          title: 'AMADO',
+        },
         component: () =>
           import(/* webpackChunkName: "index" */ '@/views/IndexView'),
       },
       {
         path: 'login',
-        name: '메인',
+        name: '로그인',
+        meta: {
+          title: 'AMADO 로그인',
+        },
         component: () =>
           import(/* webpackChunkName: "login" */ '@/views/LoginView'),
       },

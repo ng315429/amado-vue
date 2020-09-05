@@ -22,13 +22,17 @@ export default {};
 <style lang="scss" scoped>
 .header-wrap {
   width: 100%;
+  position: -webkit-sticky;
   position: sticky;
-  height: $header-height;
+  top: 0;
+  left: 0;
+  height: 50px;
   @include border-bottom-solid(1px, $border-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 12px;
+  background-color: $white;
 
   .side {
     width: 30px;
