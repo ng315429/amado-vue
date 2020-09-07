@@ -1,5 +1,5 @@
 <template>
-  <main class="layout-wrap">
+  <main class="main-layout">
     <base-header></base-header>
     <div class="container">
       <router-view></router-view>
@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.layout-wrap {
+.main-layout {
   width: 100vw;
   // min-height: 100vh;
   height: 100%;

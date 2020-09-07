@@ -15,7 +15,7 @@ const routes = [
           title: 'AMADO',
         },
         component: () =>
-          import(/* webpackChunkName: "index" */ '@/views/IndexView'),
+          import(/* webpackChunkName: "index" */ '@/views/PostsView'),
       },
       {
         path: 'login',
