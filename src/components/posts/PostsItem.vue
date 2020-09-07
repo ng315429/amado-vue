@@ -1,6 +1,6 @@
 <template>
   <div>
-    post item
+    {{ posts.title }}
   </div>
 </template>
 

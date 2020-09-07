@@ -1,39 +1,29 @@
 <template>
-  <div class="login-form-wrap">
-    <div class="container">
-      <h1 class="title">로그인</h1>
-      <div class="content">
-        <a-form :form="form" class="login-form" @submit.prevent="onSubmitLogin">
-          <div class="login-box">
-            <a-form-item class="input-line">
-              <a-input
-                placeholder="아이디"
-                v-decorator="['userId', userIdRules]"
-                allow-clear
-              >
-                <a-icon
-                  slot="prefix"
-                  type="user"
-                  style="color: rgba(0,0,0,.25)"
-                />
-              </a-input>
-            </a-form-item>
-            <a-form-item class="input-line">
-              <a-input-password
-                v-decorator="['userPassword', userPasswordRules]"
-                placeholder="비밀번호"
-              >
-                <a-icon
-                  slot="prefix"
-                  type="lock"
-                  style="color: rgba(0,0,0,.25)"
-                />
-              </a-input-password>
-            </a-form-item>
-          </div>
-          <a-button type="primary" html-type="submit" block>로그인</a-button>
-        </a-form>
-      </div>
+  <div class="login-form">
+    <h1 class="login-form__title">로그인</h1>
+    <div class="login-form__input-wrapper">
+      <a-form :form="form" @submit.prevent="onSubmitLogin">
+        <a-form-item class="login-form__input-wrapper__item">
+          <a-input
+            placeholder="아이디"
+            v-decorator="['userId', userIdRules]"
+            allow-clear
+          >
+            <a-icon slot="prefix" type="user" style="color: rgba(0,0,0,.25)" />
+          </a-input>
+        </a-form-item>
+
+        <a-form-item class="login-form__input-wrapper__item">
+          <a-input-password
+            v-decorator="['userPassword', userPasswordRules]"
+            placeholder="비밀번호"
+          >
+            <a-icon slot="prefix" type="lock" style="color: rgba(0,0,0,.25)" />
+          </a-input-password>
+        </a-form-item>
+
+        <a-button type="primary" html-type="submit" block>로그인</a-button>
+      </a-form>
     </div>
   </div>
 </template>
@@ -74,18 +64,14 @@ export default {
 </script>
 
 <style lang="scss">
-.login-form-wrap {
-  .container {
-    .title {
-      font-size: 2.5rem;
-    }
-    .content {
-      margin: 20px 0 0 0;
-      .login-box {
-        .input-line {
-          margin: 0 0 20px 0;
-        }
-      }
+.login-form {
+  &__title {
+    font-size: 2.5rem;
+  }
+  &__input-wrapper {
+    margin: 20px 0 0 0;
+    &__item {
+      margin: 10px 0;
     }
   }
 }
