@@ -1,9 +1,9 @@
 <template>
   <div class="login">
     <h1 class="login__title">로그인</h1>
-    <div class="login__input-wrapper">
-      <a-form :form="form" @submit.prevent="onSubmitLogin">
-        <a-form-item class="login__input-wrapper__item">
+    <a-form :form="form" @submit.prevent="onSubmitLogin">
+      <div class="login__input-wrapper">
+        <a-form-item class="input-line">
           <a-input
             placeholder="아이디"
             v-decorator="['userId', userIdRules]"
@@ -13,7 +13,7 @@
           </a-input>
         </a-form-item>
 
-        <a-form-item class="login__input-wrapper__item">
+        <a-form-item class="input-line">
           <a-input-password
             v-decorator="['userPassword', userPasswordRules]"
             placeholder="비밀번호"
@@ -23,8 +23,8 @@
         </a-form-item>
 
         <a-button type="primary" html-type="submit" block>로그인</a-button>
-      </a-form>
-    </div>
+      </div>
+    </a-form>
   </div>
 </template>
 
@@ -70,7 +70,7 @@ export default {
   }
   &__input-wrapper {
     margin: 20px 0 0 0;
-    &__item {
+    .input-line {
       margin: 10px 0;
     }
   }
